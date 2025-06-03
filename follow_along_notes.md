@@ -63,6 +63,12 @@
   * Modes: Normal vs Insert (`i`, `Esc`).
   * Save: `:w`, Quit: `:q`, Save & Quit: `:wq`, Force quit: `:q!`
 
+* Side-note: There are a plethora of terminal text editor other than `vim`. Notable ones are nano, emacs, neovim, etc. Choose wisely! Obligatory xkcd:
+
+<div align="center">
+  <img src="https://imgs.xkcd.com/comics/real_programmers.png" alt="Real Programmers"/>
+</div>
+
 ---
 
 #### 5. **Piping and Redirection**
