@@ -30,7 +30,7 @@
   * Create new folders.
 * **Relative vs Absolute Paths**
 
-  * Relative: `folder`, `./folder`, `~/folder`
+  * Relative: `folder`, `./folder`, `~/folder`, `..`
   * Absolute: `/Users/zackmawaldi/folder`
 
 ---
@@ -40,11 +40,12 @@
 * **touch**
 
   * Create an empty file.
-* **cat, head, tail**
+* **cat, head, tail, wc**
 
   * `cat`: Full file contents.
   * `head -n 10 file.txt`: First 10 lines.
   * `tail -n 10 file.txt`: Last 10 lines.
+  * `wc file.txt` with flags `-c` `-w` `-l` for chars, words, lines
 * **cp, mv, rm**
 
   * `cp`: Copy files/folders (`-r` for recursive).
@@ -81,6 +82,18 @@
   * `>`: Overwrite file: `ls > list.txt`
   * `>>`: Append to file: `echo "done" >> log.txt`
 
+#### Exercise 1:
+
+1. Make a new directory called `snacks`
+2. Move into that directory
+3. Create a new file called `favorites.txt`
+4. Add your favorite snack to the file
+5. Display the contents of the file
+6. Add another snack to the same file (on a new line)
+7. Count how many lines (snacks) are in the file
+
+Take a screenshot of the terminal output after typing the command for each step, or fill in the commands under each step in the above. Upload the screenshot in your github repo.
+
 ---
 
 #### 6. **Scripting Basics**
@@ -112,12 +125,13 @@
   ```bash
   echo "What's your name?"
   read entered_name
-  echo -e "\nWelcome to bash tutorial $entered_name"
+  echo # print new line
+  echo "Welcome to bash tutorial $entered_name"
   ```
 * **Variables**
 
   ```bash
-  country=USA
+  country="USA"
   same_country=$country
   ```
 * **Positional Parameters**
@@ -140,8 +154,10 @@
     echo "Less than 10"
   elif [ $1 -gt 10 ]; then
     echo "Greater than 10"
+  elif [ $1 == 10]; then
+	echo "Equal to 10"
   else
-    echo "Equal to 10"
+    echo "Impossible!"
   fi
   ```
 
@@ -156,6 +172,32 @@
     echo "Iteration $i"
   done
   ```
+
+#### Exercise 2:
+
+Write a small script (`greet.sh`) that:
+1. Prompts the user for their name (with `read`)    
+2. Greets them
+3. Accepts a country name as a command-line argument
+4. Prints a message only if the country is `"USA"`
+
+Program expected output:
+```
+(base) zackmawaldi@Midnight Desktop % bash greet.sh USA
+What's your name?
+zack
+Hello, zack!
+Welcome, fellow American!
+
+(base) zackmawaldi@Midnight Desktop % bash greet.sh Canada
+What's your name?
+zack
+Hello, zack!
+You're from Canada — cool!
+(base) zackmawaldi@Midnight Desktop %
+```
+
+Take a screenshot of your terminal showing the program running successfully, and displaying the expected outcome. Upload the screenshot in your github repo.
 
 ---
 
