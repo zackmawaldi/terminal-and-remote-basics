@@ -183,18 +183,17 @@ Write a small script (`greet.sh`) that:
 
 Program expected output:
 ```
-(base) zackmawaldi@Midnight Desktop % bash greet.sh USA
+zackmawaldi@Midnight Desktop % bash greet.sh USA
 What's your name?
 zack
 Hello, zack!
 Welcome, fellow American!
 
-(base) zackmawaldi@Midnight Desktop % bash greet.sh Canada
+zackmawaldi@Midnight Desktop % bash greet.sh Canada
 What's your name?
 zack
 Hello, zack!
 You're from Canada — cool!
-(base) zackmawaldi@Midnight Desktop %
 ```
 
 Take a screenshot of your terminal showing the program running successfully, and displaying the expected outcome. Upload the screenshot in your github repo.
